@@ -1,0 +1,7 @@
+{
+  "name": "indiahr-fiverr-qrcodeapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
