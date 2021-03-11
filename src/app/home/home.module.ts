@@ -6,14 +6,16 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { ZXingScannerModule } from './../public_api';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ZXingScannerModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
