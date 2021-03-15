@@ -4,5 +4,8 @@
   <div id="container">
     <strong>Scan QR Here</strong>
   </div>
-  <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+  <zxing-scanner
+    (scanSuccess)="onCodeResult($event)"
+    *ngIf="!processing"
+  ></zxing-scanner>
 </ion-content>
