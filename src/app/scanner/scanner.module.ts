@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ScannerPage } from './scanner.page';
 import { ZXingScannerModule } from './../public_api';
+import { SharedModule } from '../shared/shared.module';
 
 const UI_MODULES = [
   // Angular
@@ -48,6 +49,7 @@ const UI_MODULES = [
     ScannerPageRoutingModule,
     MatDialog,
     UI_MODULES,
+    SharedModule
   ],
   declarations: [ScannerPage],
 })
