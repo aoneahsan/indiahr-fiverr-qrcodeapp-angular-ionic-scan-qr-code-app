@@ -1,0 +1,31 @@
+<app-header title="Verification Failed"></app-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12">
+        <ion-icon
+          name="close-outline"
+          style="font-size: 10rem"
+          color="danger"
+        ></ion-icon>
+      </ion-col>
+      <ion-col size="12" sizeSm="8" offsetSm="2" sizeSm="6" offsetSm="3">
+        <ion-text style="font-size: 22px; line-height: 1.6"
+          ><ion-text color="danger">STOP!</ion-text> Do not use! Your product is
+          <ion-text color="danger">suspicious</ion-text> Please ensure that you
+          have an original product and try to scan again Enquiries? Email:
+          <ion-text color="dark"
+            ><a href="mailto:help@sproxil.com">help@sproxil.com</a></ion-text
+          >
+          Linda Cares!</ion-text
+        >
+      </ion-col>
+      <ion-col size="12" class="ion-margin-top">
+        <ion-button color="danger" [routerLink]="['/scan-and-verify']"
+          >Go back</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
