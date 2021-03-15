@@ -3,17 +3,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'scan-and-verify',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
     redirectTo: 'welcome',
     pathMatch: 'full'
-  },
-  {
-    path: 'demo',
-    loadChildren: () => import('./demo/demo.module').then( m => m.DemoPageModule)
   },
   {
     path: 'welcome',
@@ -26,6 +18,14 @@ const routes: Routes = [
   {
     path: 'verification-failed',
     loadChildren: () => import('./error-response/error-response.module').then( m => m.ErrorResponsePageModule)
+  },
+  {
+    path: 'scan-and-verify',
+    loadChildren: () => import('./scan-and-verify/scan-and-verify.module').then( m => m.ScanAndVerifyPageModule)
+  },
+  {
+    path: 'generate-qr',
+    loadChildren: () => import('./generate-qr/generate-qr.module').then( m => m.GenerateQrPageModule)
   },
 ];
 

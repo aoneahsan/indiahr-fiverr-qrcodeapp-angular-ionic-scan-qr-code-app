@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  openDeveloperWebsite() {
+    window.open('http://aoneahsan.website', '_blank');
+  }
 }

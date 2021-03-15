@@ -1,0 +1,46 @@
+<app-header title="QR Code Generator and Scanner"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" sizSm="8" offsetSm="2" sizeMd="6" offsetMd="3">
+        <ion-item>
+          <ion-label position="stacked">Stacked Label</ion-label>
+          <ion-input [(ngModel)]="customQRCode"></ion-input>
+        </ion-item>
+        <ion-card *ngIf="customQRCode" class="ion-text-center">
+          <ion-title class="ion-margin-top">
+            Value: {{ customQRCode }}
+          </ion-title>
+          <qrcode
+            [qrdata]="customQRCode"
+            [width]="300"
+            [errorCorrectionLevel]="'M'"
+            [elementType]="'svg'"
+          ></qrcode>
+        </ion-card>
+        <ion-title class="ion-text-center ion-margin-top ion-padding-top">Valid QRs</ion-title>
+        <ion-list>
+          <ion-item>
+            <ion-label>Sproxil Authentication</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Ahsan Mahmood</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Mega Man X</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>The Legend of Zelda</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Pac-Man</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Super Mario World</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
