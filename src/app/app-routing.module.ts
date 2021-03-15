@@ -20,11 +20,11 @@ const routes: Routes = [
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
   {
-    path: 'success-response',
+    path: 'verification-success',
     loadChildren: () => import('./success-response/success-response.module').then( m => m.SuccessResponsePageModule)
   },
   {
-    path: 'error-response',
+    path: 'verification-failed',
     loadChildren: () => import('./error-response/error-response.module').then( m => m.ErrorResponsePageModule)
   },
 ];

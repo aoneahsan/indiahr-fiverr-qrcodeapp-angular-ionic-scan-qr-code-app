@@ -13,9 +13,12 @@ export class HeaderComponent implements OnInit {
   constructor(private _title: Title, private _meta: Meta) {}
 
   ngOnInit() {
-    this._title.setTitle(this.title);
+    this._title.setTitle(`${this.title} | Zaions.com`);
     this._meta.addTags([
-      { name: 'description', content: this.metaDescription },
+      {
+        name: 'description',
+        content: `${this.metaDescription}, ${this.title} | Zaions.com`,
+      },
       { name: 'keywords', content: `${this.title}, ${this.metaDescription}` },
     ]);
   }
