@@ -24,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./scan-and-verify/scan-and-verify.module').then( m => m.ScanAndVerifyPageModule)
   },
   {
-    path: 'generate-qr',
+    path: 'generate-qr-hidden13331',
     loadChildren: () => import('./generate-qr/generate-qr.module').then( m => m.GenerateQrPageModule)
   },
 ];

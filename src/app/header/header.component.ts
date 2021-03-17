@@ -11,6 +11,9 @@ export class HeaderComponent implements OnInit {
   @Input() title = 'Scan & Verify | Sproxil Authentication';
   @Input() metaDescription =
     'Welcome to Sproxil Authentication | Scan & Verify App';
+
+  // DomainName = "Zaions.com";
+  DomainName = 'Sproxil';
   constructor(
     private _title: Title,
     private _meta: Meta,
@@ -18,11 +21,11 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this._title.setTitle(`${this.title} | Zaions.com`);
+    this._title.setTitle(`${this.title} | ${this.DomainName}`);
     this._meta.addTags([
       {
         name: 'description',
-        content: `${this.metaDescription}, ${this.title} | Zaions.com`,
+        content: `${this.metaDescription}, ${this.title} | ${this.DomainName}`,
       },
       { name: 'keywords', content: `${this.title}, ${this.metaDescription}` },
     ]);

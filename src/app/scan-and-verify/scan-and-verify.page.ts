@@ -10,12 +10,52 @@ import { LoadingController } from '@ionic/angular';
 export class ScanAndVerifyPage implements OnInit {
   qrResultString;
   validQRs = [
-    'Sproxil Authentication',
-    'Ahsan Mahmood',
-    'Mega Man X',
-    'The Legend of Zelda',
-    'Pac-Man',
-    'Super Mario World',
+    4002161724068,
+    4002161380608,
+    4002160595869,
+    4002165796092,
+    4002160137138,
+    4002162993557,
+    4002167849869,
+    4002160031987,
+    4002160968682,
+    4002168978817,
+    4002160696117,
+    4002161456448,
+    4002164310884,
+    4002162696487,
+    4002160316331,
+    4002166597841,
+    4002166597841,
+    4002161386639,
+    4002167362931,
+    4002165509701,
+    4002161622940,
+    4002168001415,
+    4002166302646,
+    4002165649497,
+    4002165649497,
+    4002165533702,
+    4002168288424,
+    4002162120975,
+    4002165232162,
+    4002163831576,
+    4002162635957,
+    4002165816740,
+    4002166453121,
+    4002161690745,
+    4002160241020,
+    4002166954338,
+    4002166604876,
+    4002163780306,
+    4002162395777,
+    4002161010571,
+    4002165243593,
+    4002162284227,
+    4002164314086,
+    4002163221818,
+    4002160574617,
+    4002164430718,
   ];
   processing: boolean = false;
   constructor(
@@ -27,7 +67,7 @@ export class ScanAndVerifyPage implements OnInit {
     this.processing = false;
   }
 
-  onCodeResult(resultString: string) {
+  onCodeResult(resultString) {
     this.processing = true;
     this.qrResultString = resultString;
     const qrIndex = this.validQRs.findIndex((el) => el == resultString);

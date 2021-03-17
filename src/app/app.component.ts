@@ -11,4 +11,8 @@ export class AppComponent {
   openDeveloperWebsite() {
     window.open('http://aoneahsan.website', '_blank');
   }
+
+  openMainWebsite() {
+    window.location.href = 'https://sproxil.com/';
+  }
 }

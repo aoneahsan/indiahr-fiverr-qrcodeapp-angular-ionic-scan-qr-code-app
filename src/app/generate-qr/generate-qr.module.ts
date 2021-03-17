@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { GenerateQrPageRoutingModule } from './generate-qr-routing.module';
 
 import { GenerateQrPage } from './generate-qr.page';
-import { NgxQRCodeModule } from 'ngx-qrcode2';
+// import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { QRCodeModule } from 'angularx-qrcode';
 import { SharedModule } from '../shared/shared.module';
 
@@ -17,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     IonicModule,
     GenerateQrPageRoutingModule,
-    NgxQRCodeModule,
+    // NgxQRCodeModule,
     QRCodeModule,
     SharedModule
   ],
