@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-generate-qr',
@@ -6,26 +7,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./generate-qr.page.scss'],
 })
 export class GenerateQrPage implements OnInit {
-  ngOnInit() {}
-
-  qrData = null;
-  createdCode = 'ahsan';
-  scannedCode = null;
-  barcodeScanner: any;
-
   customQRCode: string = 'ahsan';
+  toastTimeOut;
 
-  // constructor(private barcodeScanner: BarcodeScanner) {}
-  constructor() {}
+  constructor(private _toast: ToastController) {}
 
-  createCode() {
-    this.createdCode = this.qrData;
-    console.log(this.createdCode);
+  ngOnInit() {
+    setTimeout(() => {
+      this._toast.dismiss(null, null, 'me');
+    }, 10000);
   }
 
-  scanCode() {
-    this.barcodeScanner.scan().then((barcodeData) => {
-      this.scannedCode = barcodeData.text;
-    });
+  changeQRCode(code: string) {
+    if (this.toastTimeOut) {
+      clearTimeout(this.toastTimeOut);
+    }
+    this.customQRCode = code;
+    this._toast
+      .create({
+        id: 'me',
+        message: 'QR Code Value Set to: ' + code,
+      })
+      .then((toast) => {
+        toast.present();
+        this.toastTimeOut = setTimeout(() => {
+          toast.dismiss();
+        }, 3000);
+      })
+      .catch((err) => {
+        console.log('Error while showing toast = ', err);
+      });
   }
 }
