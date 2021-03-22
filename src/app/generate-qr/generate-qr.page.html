@@ -5,41 +5,54 @@
     <ion-row>
       <ion-col size="12" sizSm="8" offsetSm="2" sizeMd="6" offsetMd="3">
         <ion-item>
-          <ion-label position="stacked">Stacked Label</ion-label>
+          <ion-label position="stacked">Set QR Code Value</ion-label>
           <ion-input [(ngModel)]="customQRCode"></ion-input>
         </ion-item>
         <ion-card *ngIf="customQRCode" class="ion-text-center">
           <ion-title class="ion-margin-top">
             Value: {{ customQRCode }}
           </ion-title>
+          <!-- <ion-row>
+            <ion-col size="12" sizeMd="6">
+            </ion-col>
+            <ion-col size="12" sizeMd="6">
+              <ion-button color="primary" (click)="downloadImage('png')">
+                Download QR Code
+              </ion-button>
+            </ion-col>
+          </ion-row> -->
+          <br />
           <qrcode
+            id="qrCode"
+            #screen
             [qrdata]="customQRCode"
             [width]="300"
             [errorCorrectionLevel]="'M'"
             [elementType]="'svg'"
           ></qrcode>
         </ion-card>
-        <ion-title class="ion-text-center ion-margin-top ion-padding-top">Valid QRs</ion-title>
+        <ion-title class="ion-text-center ion-margin-top ion-padding-top"
+          >Demo QRs</ion-title
+        >
         <ion-list>
-          <ion-item (click)="changeQRCode('Sproxil Authentication')">
-            <ion-label>Sproxil Authentication</ion-label>
+          <ion-item (click)="changeQRCode('Zaions.com')">
+            <ion-label>Zaions.com</ion-label>
           </ion-item>
           <ion-item (click)="changeQRCode('Ahsan Mahmood')">
             <ion-label>Ahsan Mahmood</ion-label>
           </ion-item>
-          <ion-item (click)="changeQRCode('Mega Man X')">
-            <ion-label>Mega Man X</ion-label>
+          <ion-item (click)="changeQRCode('AONEAHSAN')">
+            <ion-label>AONEAHSAN</ion-label>
           </ion-item>
-          <ion-item (click)="changeQRCode('The Legend of Zelda')">
-            <ion-label>The Legend of Zelda</ion-label>
-          </ion-item>
-          <ion-item (click)="changeQRCode('Pac-Man')">
-            <ion-label>Pac-Man</ion-label>
-          </ion-item>
-          <ion-item (click)="changeQRCode('Super Mario World')">
-            <ion-label>Super Mario World</ion-label>
+          <ion-item (click)="changeQRCode('aoneahsan.website')">
+            <ion-label>aoneahsan.website</ion-label>
           </ion-item>
         </ion-list>
+
+        <div id="download">
+          <img #canvas />
+          <a #downloadLink></a>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

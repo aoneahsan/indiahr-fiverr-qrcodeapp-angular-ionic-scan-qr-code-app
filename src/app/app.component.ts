@@ -13,6 +13,6 @@ export class AppComponent {
   }
 
   openMainWebsite() {
-    window.location.href = 'https://sproxil.com/';
+    window.location.href = 'http://zaions.com/';
   }
 }

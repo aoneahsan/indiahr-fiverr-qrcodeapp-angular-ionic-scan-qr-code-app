@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
+// import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-scan-and-verify',
@@ -60,7 +61,8 @@ export class ScanAndVerifyPage implements OnInit {
   processing: boolean = false;
   constructor(
     private _router: Router,
-    private _loadingCtl: LoadingController
+    // private _loadingCtl: LoadingController,
+    private _toastCtl: ToastController
   ) {}
 
   ngOnInit() {
@@ -68,28 +70,36 @@ export class ScanAndVerifyPage implements OnInit {
   }
 
   onCodeResult(resultString) {
-    this.processing = true;
+    // this.processing = true;
     this.qrResultString = resultString;
-    const qrIndex = this.validQRs.findIndex((el) => el == resultString);
-    this._loadingCtl.create({ message: 'Processing...' }).then((loadingEl) => {
-      loadingEl.present();
-      setTimeout(() => {
-        loadingEl.dismiss();
-      }, 1600);
-      setTimeout(() => {
-        this.loadingDone(qrIndex);
-      }, 2200);
-    });
+    // const qrIndex = this.validQRs.findIndex((el) => el == resultString);
+    // this._loadingCtl.create({ message: 'Processing...' }).then((loadingEl) => {
+    //   loadingEl.present();
+    //   setTimeout(() => {
+    //     loadingEl.dismiss();
+    //   }, 1600);
+    //   setTimeout(() => {
+    //     this.loadingDone(qrIndex);
+    //   }, 2200);
+    // });
+    this._toastCtl
+      .create({ message: 'QR Value: ' + resultString })
+      .then((toast) => {
+        toast.present();
+        setTimeout(() => {
+          toast.dismiss();
+        });
+      });
   }
 
-  loadingDone(qrIndex) {
-    if (qrIndex > -1) {
-      this._router.navigate(['/verification-success']);
-    } else {
-      this._router.navigate(['/verification-failed']);
-    }
-    setTimeout(() => {
-      this.processing = false;
-    }, 1000);
-  }
+  // loadingDone(qrIndex) {
+  //   if (qrIndex > -1) {
+  //     this._router.navigate(['/verification-success']);
+  //   } else {
+  //     this._router.navigate(['/verification-failed']);
+  //   }
+  //   setTimeout(() => {
+  //     this.processing = false;
+  //   }, 1000);
+  // }
 }

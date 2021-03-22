@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() title = 'Scan & Verify | Sproxil Authentication';
+  @Input() title = 'Scan & Verify | Zaions Authentication';
   @Input() metaDescription =
-    'Welcome to Sproxil Authentication | Scan & Verify App';
+    'Welcome to Zaions Authentication | Scan & Verify App';
 
   // DomainName = "Zaions.com";
-  DomainName = 'Sproxil';
+  DomainName = 'Zaions';
   constructor(
     private _title: Title,
     private _meta: Meta,
