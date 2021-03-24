@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "com.zaions.generate-scan-qrcodes",
+  "appId": "com.zaions.scangenerateqrcodes",
+  "appName": "Scan & Generate QR",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
