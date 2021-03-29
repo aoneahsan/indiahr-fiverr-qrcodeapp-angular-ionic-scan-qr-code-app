@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Scan Generate QR</string>
-    <string name="title_activity_main">Scan Generate QR</string>
-    <string name="package_name">com.zaions.scangenerateqrcodes</string>
-    <string name="custom_url_scheme">com.zaions.scangenerateqrcodes</string>
-</resources>

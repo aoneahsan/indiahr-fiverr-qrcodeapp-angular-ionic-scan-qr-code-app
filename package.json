@@ -1,6 +1,6 @@
 {
   "name": "scanqrcode",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "author": "Ahsan Mahmood",
   "homepage": "http://aoneahsan.website/",
   "scripts": {
@@ -59,5 +59,5 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
   },
-  "description": "QR scanner app & Generate new QR codes."
+  "description": "QR scanner app & Generate new QR codes. it's a Web (PWA) + Mobile (android) app. user can use this app to scan any QR code, or he/she can use this app to create any QR code based on any text."
 }
