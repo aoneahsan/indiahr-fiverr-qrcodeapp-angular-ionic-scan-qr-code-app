@@ -1,9 +1,10 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "indiahr-fiverr-qrcodeapp",
+  "appId": "com.zaions.scangenerateqrcodes",
+  "appName": "Scan & Generate QR",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
+  "linuxAndroidStudioPath": "/home/ahsan/android-studio/bin/studio.sh",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

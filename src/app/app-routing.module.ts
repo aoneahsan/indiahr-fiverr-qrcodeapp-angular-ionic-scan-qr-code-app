@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'generate-qr',
     loadChildren: () => import('./generate-qr/generate-qr.module').then( m => m.GenerateQrPageModule)
   },
+  {
+    path: 'privacy-policy',
+    loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
+  },
 ];
 
 @NgModule({

@@ -14,7 +14,7 @@
         <ion-menu-toggle>
           <ion-item lines="none" routerLink="/scan-and-verify">
             <ion-icon slot="start" name="scan-circle-outline"></ion-icon>
-            <ion-label>Scanner</ion-label>
+            <ion-label>Scan QR Code</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
@@ -24,9 +24,21 @@
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/privacy-policy">
+            <ion-icon slot="start" name="document-text-outline"></ion-icon>
+            <ion-label>Priacy Policy</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
           <ion-item lines="none" (click)="openDeveloperWebsite()">
             <ion-icon slot="start" name="person-outline"></ion-icon>
-            <ion-label>About Developer</ion-label>
+            <ion-label>App Developer</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" (click)="openMainWebsite()">
+            <ion-icon slot="start" name="logo-web-component"></ion-icon>
+            <ion-label>Zaions.Com</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

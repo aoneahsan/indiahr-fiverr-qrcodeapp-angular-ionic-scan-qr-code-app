@@ -1,0 +1,5 @@
+Please see attached changes that need to be made. Also, we need to store the PINs in the attachment in a location so that when a QR code embedded with one of those PINs is scanned, then it gives a positive response else a suspicious response.
+
+Also, replace the phone and QR code image in the homepage with the attached gif animation. Also, use the company logo attached where necessary and change the button color to match the company logo. See attached sample button for your reference.
+
+Let me know if you have any questions.

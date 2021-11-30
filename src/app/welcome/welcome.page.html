@@ -3,28 +3,35 @@
 <ion-content class="ion-padding ion-text-center">
   <ion-grid>
     <ion-row class="ion-align-items-center">
-      <ion-col size="12">
-        <ion-title>Welcome to Sproxil Authentication</ion-title>
-      </ion-col>
       <ion-col
         size="12"
         sizeSm="8"
         offsetSm="2"
-        sizeMd="4"
-        offsetMd="4"
-        class="ion-margin-top"
+        sizeMd="6"
+        offsetMd="3"
+        class="custom-border"
       >
-        <ion-img src="assets/scan-qr.png"></ion-img>
-      </ion-col>
-      <ion-col size="12" sizeSm="8" offsetSm="2">
-        <ion-text
-          >Click “Scan QR Code” below to scan the QR code on your product and
-          verify</ion-text
-        >
-      </ion-col>
-      <ion-col size="12">
-        <ion-button color="danger" [routerLink]="['/scan-and-verify']">Scan QR Code</ion-button>
-      </ion-col>
+        <ion-col>
+          <ion-title>Welcome to Scan & Generate QR - Zaions.com</ion-title>
+        </ion-col>
+        <ion-col class="ion-margin-top">
+          <ion-img src="assets/scan-icon.jpg" class="welcome-img"></ion-img>
+        </ion-col>
+        <br />
+        <ion-col class="ion-padding"
+          >Click “Scan QR Code” below to scan the QR code or click "Generate QR"
+          in menu to generate new QR Code
+        </ion-col>
+        <br />
+        <ion-col class="" style="margin-top: 20px; display: block">
+          <ion-button
+            color="primary"
+            [routerLink]="['/scan-and-verify']"
+            class="btn-bg"
+            >Scan QR Code</ion-button
+          >
+        </ion-col></ion-col
+      >
     </ion-row>
   </ion-grid>
 </ion-content>

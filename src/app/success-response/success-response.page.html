@@ -3,24 +3,42 @@
 <ion-content class="ion-padding ion-text-center">
   <ion-grid>
     <ion-row class="ion-align-items-center">
-      <ion-col size="12">
-        <ion-icon
-          name="checkmark-circle-outline"
-          style="font-size: 10rem"
-          color="success"
-        ></ion-icon>
-      </ion-col>
-      <ion-col size="12" sizeSm="8" offsetSm="2" sizeSm="6" offsetSm="3">
-        <ion-text style="font-size: 22px; line-height: 1.6;"
-          >You have purchased an original <ion-text color="primary">XPression hair</ion-text> form <ion-text color="secondary">Linda
-          Manufacturing Co Ltd</ion-text>. Express your beauty with X-Pression products.
-          Enquiries? Email: <ion-text color="dark"><a href="mailto:help@sproxil.com">help@sproxil.com</a></ion-text> Thank you!</ion-text
-        >
-      </ion-col>
-      <ion-col size="12" class="ion-margin-top">
-        <ion-button color="danger" [routerLink]="['/scan-and-verify']"
-          >Scan Another Product</ion-button
-        >
+      <ion-col
+        size="12"
+        sizeSm="8"
+        offsetSm="2"
+        sizeMd="6"
+        offsetMd="3"
+        class="custom-border"
+      >
+        <ion-row>
+          <ion-col size="12">
+            <ion-icon
+              name="checkmark-circle-outline"
+              style="font-size: 10rem"
+              color="success"
+            ></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-text style="font-size: 22px; line-height: 1.6"
+              >You have purchased an original
+              <ion-text color="primary">XPression hair</ion-text> form
+              <ion-text color="secondary">Linda Manufacturing Co Ltd</ion-text>.
+              Express your beauty with X-Pression products. Enquiries? Email:
+              <ion-text color="dark"
+                ><a href="mailto:help@zaions.com"
+                  >help@zaions.com</a
+                ></ion-text
+              >
+              Thank you!</ion-text
+            >
+          </ion-col>
+          <ion-col size="12" class="ion-margin-top">
+            <ion-button color="primary" [routerLink]="['/scan-and-verify']"
+              >Scan Another Product</ion-button
+            >
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </ion-grid>

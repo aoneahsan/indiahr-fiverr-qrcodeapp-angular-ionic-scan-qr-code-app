@@ -1,6 +1,6 @@
 {
-  "name": "qrcodeapp",
-  "version": "0.0.1",
+  "name": "scanqrcode",
+  "version": "1.0.3",
   "author": "Ahsan Mahmood",
   "homepage": "http://aoneahsan.website/",
   "scripts": {
@@ -25,20 +25,11 @@
     "@angular/service-worker": "~11.2.0",
     "@capacitor/android": "^2.4.7",
     "@capacitor/core": "2.4.7",
-    "@capacitor/ios": "^2.4.7",
-    "@ionic-native/barcode-scanner": "^5.31.1",
-    "@ionic-native/toast": "^5.31.1",
     "@ionic/angular": "^5.5.2",
-    "@ionic/core": "^5.6.0",
     "@zxing/browser": "0.0.8",
     "@zxing/library": "^0.18.4",
     "@zxing/ngx-scanner": "^3.1.3",
     "angularx-qrcode": "^11.0.0",
-    "cordova-plugin-barcodescanner": "^0.7.4",
-    "cordova-plugin-compat": "^1.2.0",
-    "cordova-plugin-x-toast": "^2.7.2",
-    "ngx-qrcode2": "^9.0.0",
-    "phonegap-plugin-barcodescanner": "^8.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -68,5 +59,5 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
   },
-  "description": "QR scanner app"
+  "description": "QR scanner app & Generate new QR codes. it's a Web (PWA) + Mobile (android) app. user can use this app to scan any QR code, or he/she can use this app to create any QR code based on any text."
 }

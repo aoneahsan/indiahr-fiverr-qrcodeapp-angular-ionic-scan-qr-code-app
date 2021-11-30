@@ -4,6 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ title }}</ion-title>
+    <!-- <ion-title><ion-img src="assets/scan-icon.jpg" style="width: 100px;"></ion-img></ion-title> -->
     <ion-buttons slot="end" class="ion-padding-right" class="links">
       <ion-button expand="block" (click)="openUrl('/', true)" color="medium"
         >Home</ion-button
@@ -12,13 +13,25 @@
         expand="block"
         (click)="openUrl('/scan-and-verify', true)"
         color="medium"
-        >Scan & Verify</ion-button
+        >Scan QR Code</ion-button
       >
       <ion-button
         expand="block"
         (click)="openUrl('/generate-qr', true)"
         color="medium"
-        >Generate QR</ion-button
+        >Generate QR Code</ion-button
+      >
+      <ion-button
+        expand="block"
+        (click)="openUrl('http://aoneahsan.website', false)"
+        color="medium"
+        >Developer</ion-button
+      >
+      <ion-button
+        expand="block"
+        (click)="openUrl('http://zaions.com', false)"
+        color="medium"
+        >Zaions.Com</ion-button
       >
     </ion-buttons>
   </ion-toolbar>
